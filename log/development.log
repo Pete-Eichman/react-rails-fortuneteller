@@ -1,0 +1,927 @@
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from load at /Users/Pete/.gem/ruby/2.3.1/bin/rake:23)
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying PRIMARY KEY)[0m
+  [1m[35m (3.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7913082835282300095);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-04-13 18:16:11 UTC], ["updated_at", 2017-04-13 18:16:11 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7913082835282300095)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/api/fortune" for 127.0.0.1 at 2017-04-13 14:20:12 -0400
+DEPRECATION WARNING: ActiveRecord::Base.raise_in_transactional_callbacks= is deprecated, has no effect and will be removed without replacement. (called from block (3 levels) in <class:Railtie> at /Users/Pete/.gem/ruby/2.3.1/gems/activerecord-5.0.2/lib/active_record/railtie.rb:113)
+Processing by Api::FortunesController#show as */*
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:21:08 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 3473ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ($color: "foreground(#2199e8)" is not a color for `red'):
+     7: 
+     8:     %title= content_for?(:title) ? yield(:title) : "Untitled"
+     9: 
+    10:     = stylesheet_link_tag "application"
+    11:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    12:     = csrf_meta_tag
+    13: 
+  
+app/assets/stylesheets/foundation_and_overrides.scss:21
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___2803194660124204864_70354358815920'
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.9ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.5ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (82.4ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__ete__gem_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__750094172406763591_70354360280340 at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (56.1ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (6.8ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (126.5ms)
+Started GET "/api/fortune" for 127.0.0.1 at 2017-04-13 14:23:16 -0400
+Processing by Api::FortunesController#show as */*
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:23:43 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 1841ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ($color: "foreground(#2199e8)" is not a color for `red'):
+     7: 
+     8:     %title= content_for?(:title) ? yield(:title) : "Untitled"
+     9: 
+    10:     = stylesheet_link_tag "application"
+    11:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    12:     = csrf_meta_tag
+    13: 
+  
+app/assets/stylesheets/foundation_and_overrides.scss:21
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___2803194660124204864_70354395581540'
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.2ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__ete__gem_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__750094172406763591_70354416964920 at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.2ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (111.7ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:24:48 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 2209ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ($color: "foreground(#2199e8)" is not a color for `red'):
+     7: 
+     8:     %title= content_for?(:title) ? yield(:title) : "Untitled"
+     9: 
+    10:     = stylesheet_link_tag "application"
+    11:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    12:     = csrf_meta_tag
+    13: 
+  
+app/assets/stylesheets/foundation_and_overrides.scss:29
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___2803194660124204864_70354411854940'
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:24:50 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (79.1ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__ete__gem_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__750094172406763591_70354373166280 at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (65.3ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (142.9ms)
+Completed 500 Internal Server Error in 2432ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error ($color: "foreground(#2199e8)" is not a color for `red'):
+     7: 
+     8:     %title= content_for?(:title) ? yield(:title) : "Untitled"
+     9: 
+    10:     = stylesheet_link_tag "application"
+    11:     = javascript_include_tag "application", "data-turbolinks-track" => true
+    12:     = csrf_meta_tag
+    13: 
+  
+app/assets/stylesheets/foundation_and_overrides.scss:29
+app/assets/stylesheets/application.scss:1
+app/views/layouts/application.html.haml:10:in `_app_views_layouts_application_html_haml___2803194660124204864_70354394477440'
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (64.5ms)
+DEPRECATION WARNING: #original_exception is deprecated. Use #cause instead. (called from block in render_exception_with_web_console at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/extensions.rb:16)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::HTML` to `Mime[:html]`. (called from acceptable_content_type? at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/middleware.rb:58)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+DEPRECATION WARNING: Accessing mime types via constants is deprecated. Please change `Mime::WEB_CONSOLE_V2` to `Mime[:web_console_v2]`. (called from ___sers__ete__gem_ruby_______gems_web_console_______lib_web_console_templates_console_js_erb__750094172406763591_70354436083940 at /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb:491)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (49.3ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendering /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Pete/.gem/ruby/2.3.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (108.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:25:35 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:25:39 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.5ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:06 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 32420ms (Views: 32417.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 27801ms (Views: 27798.9ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 1353ms (Views: 1351.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-ee9b58186621ed1c39a337e65b3c290ea0ef3e01861227b057581af397829ba6.css?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.abide.self-679179bf3ee1902bc3fe7da64bbb2b731fa4df4a75901538ba55e7d25286313e.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.core.self-4f457971ba9c2597b09f6a22a24331c38e7279daa591bd61b5bbf28876aa8fc3.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.accordion.self-8d244ceae0d451fcc15789a5e9e36ebed60650c8a9abbf5f9a126b6f327b6154.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.accordionMenu.self-d9a7c97eb11b52fe305e71d2becbdfaf772722f9da6bd56ad24121919d5e43ca.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.dropdownMenu.self-386455a3346e601e0a524f9de7e5146e73ef63055ba5394290f5f9a3a2cb74d7.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.dropdown.self-c0e613ea4f5cf333f28aa6e97d54dcf6f739b7b95beed9175870525fbb190200.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.drilldown.self-1197ab1398f5a6e188d25902ca65cb079c5c769583801244c456e39aeb484876.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.interchange.self-be09943d6d46443136cd84ffda8b5b8a008db8355c144097949fcaf7d5289a56.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.magellan.self-789eaceb55bd54bd0ed8fea6adf2b18c21464581b0e95eaa8a5aff1130208b2d.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.equalizer.self-7221ea2a8fba1b3495851e00b58ade3f76ce11a8230ab5cf9ca81a39e7eadd4e.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.offcanvas.self-9ce0609e0e4404d19bde3425bf63955c74836aa9f0772d9b7e26ab731c1f2e8c.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.orbit.self-a127e190c8224d789844ee10a7c4123fe5aef28bc5bf75e9e185b3e098651078.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.responsiveToggle.self-e997867128d1cc2b0268d6d8a0b3d1d4acdd8b18481dbcc50e8c41b06dea77d1.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.responsiveMenu.self-c16f1dc4c3fa8e4881e116d1072642a8f0d53db8725994fd5a32f5cab1a30991.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.reveal.self-958c10cf13f0fa316d5753a6c03b7e1c6c76819b5978cefa85df960856744a98.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.slider.self-130c3657134bb131ceec80b3553bfe98731d170c5b6b89506f7aeca0934bf3ab.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.sticky.self-6132d9675d96d8eb9d6426a329ba49a9c70756620079fcf1e9dc0509d710ff3b.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.tabs.self-76b83dbeb1a526b713949431c11539c4f15ea95620a32b357452afb4e969778d.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.toggler.self-32c8ba5ef7c4612d3cf417a6fb5ff296ee2fc8a1778995f4571c5ca3aed7c1a5.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.tooltip.self-34253627e75f9473117d9e2f269e29eb8871e50679a25ee82736fb52acf0f65a.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.box.self-29f7cbc36d64afedbf3295384f579c067ee4a6107059d25041cf9c2ffbdac287.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.mediaQuery.self-f587619a109ff8be49d8eacb95b733d75cbdcc9819a19ce8c2af1be48e65524b.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.keyboard.self-4a273ab1fd2edf1b86d3e772465bff74a28c721021c719eb48de76cf9a220d9c.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.nest.self-10050c8cffe586f45b7cb4570a5aa0d498e566ac981f4e494bd42246b4daafc7.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.timerAndImageLoader.self-0cb4d35725065a9a79f69d241210298190b5f1e134522d565a872f984e1e26b8.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:07 -0400
+Started GET "/assets/foundation.util.touch.self-95e098450fe69653246bdfa7f1e7fe7dba15348524771d7b2c54c7c4298fccb5.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/foundation.util.motion.self-65f3e3cc6f7990ae5a0d964eb90d626e0a5486508a11487145ba14aa4b2a2e78.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/foundation.util.triggers.self-4fef1a2bcee50931073341abc76d0747ace3559d818342a079c07c54e27f8add.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/foundation.zf.responsiveAccordionTabs.self-1cd003cd23ec70291aa4b3ee3c46097d1fddb74afe524d057af1339b0251bdc9.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/foundation.self-5ecf2f4d83e6260dabd6ec48e76d8ddebccf956563f34072221bf960d3b8c255.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/bundle.self-a8cd3a063290fb5e7686d1562cc4222865c208c34765bc5ae9ed1e9531a09eb9.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/assets/application.self-1509cb3433bf7f60a75710bd4d8561d25423676b3c4d4a21914940bf07b8869a.js?body=1" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:08 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:14 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 96ms (Views: 94.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:14 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:15 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 105ms (Views: 103.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:15 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:15 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 116ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 201ms (Views: 199.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 97ms (Views: 93.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 82ms (Views: 79.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 79ms (Views: 77.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 72.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 76ms (Views: 74.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:17 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 82ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 86ms (Views: 84.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 83ms (Views: 81.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:18 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 125ms (Views: 123.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 105ms (Views: 103.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 106ms (Views: 104.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 101ms (Views: 97.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 92ms (Views: 90.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 99ms (Views: 97.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:20 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 90ms (Views: 88.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:21 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:21 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 90ms (Views: 88.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:21 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:21 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 70ms (Views: 68.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:21 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:42 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:44 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:45 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.4ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:45 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:46 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:26:52 -0400
+Completed 200 OK in 9571ms (Views: 9569.0ms | ActiveRecord: 0.0ms)
+
+
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 601ms (Views: 596.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-72875215481799de71af695727b70e2a7d15fa30abd7574c008a6adb7dd08f6d.css?body=1" for 127.0.0.1 at 2017-04-13 14:26:53 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:26:54 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12746ms (Views: 12743.3ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 13290ms (Views: 12980.1ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12665ms (Views: 12663.4ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 12446ms (Views: 12441.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:27:13 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 3093ms (Views: 3091.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-152a63b4a4b3660885dcd28eeb691e228b7c635768edb97be258ac4c5694dc16.css?body=1" for 127.0.0.1 at 2017-04-13 14:27:16 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:27:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:27:36 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3030ms (Views: 3028.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-ba93ba443e20b9babe42264df22a48c9df36b28e077922d3462e86e0b2fc5da9.css?body=1" for 127.0.0.1 at 2017-04-13 14:27:39 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:27:39 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:27:47 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3013ms (Views: 3011.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-b968f7ec398532f0a893e8d5cc648cb60fbc84e1ebfdb63917ccc38ac34620e1.css?body=1" for 127.0.0.1 at 2017-04-13 14:27:50 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:27:50 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:00 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 85ms (Views: 83.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:01 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:03 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 86ms (Views: 84.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:03 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:10 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3021ms (Views: 3019.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-071c228ae1f7d885c0f75225c40a947b3440e4edc96bd83e591a5a1f1ad3f41c.css?body=1" for 127.0.0.1 at 2017-04-13 14:28:13 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:13 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:15 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 81ms (Views: 79.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:16 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:17 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 103ms (Views: 101.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:18 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:28:19 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 88ms (Views: 86.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:28:20 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:07 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3609ms (Views: 3607.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-8651c683be4b4e6a5210d5d4f7b06a59825375680eec9625cb6bf34669a3fdf5.css?body=1" for 127.0.0.1 at 2017-04-13 14:29:10 -0400
+Started GET "/assets/bundle.self-7746b01d9c19e0c133bc1970f07a579a1b637c1173b42b1f230075731ab3476a.js?body=1" for 127.0.0.1 at 2017-04-13 14:29:10 -0400
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:12 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:14 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 70ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:24 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 62ms (Views: 60.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:27 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 63ms (Views: 61.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:28 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 77ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:29 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 80ms (Views: 78.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:30 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:31 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 64ms (Views: 63.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:32 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 84ms (Views: 82.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:29:50 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 562ms (Views: 560.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-53516d8ad421b577248e826a6b10e852cebe5b800b48ce155c9d7331bf4f5dab.js?body=1" for 127.0.0.1 at 2017-04-13 14:29:51 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:29:51 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:30:01 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 2800ms (Views: 2798.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-0b12c43974d09cf702b40450517e28ab706712307bd17537595acaf3a55398b6.css?body=1" for 127.0.0.1 at 2017-04-13 14:30:04 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:30:04 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:30:16 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2921ms (Views: 2919.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-551cc6257c3c2155e503913359b34a2b9e2683f3ec3a07d9ed1d485389bc937f.css?body=1" for 127.0.0.1 at 2017-04-13 14:30:19 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:30:19 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:30:47 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 2978ms (Views: 2976.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-149d9373e667b12c572052ab4f06fbb629ba112e4df2943e23721928507d0fd4.css?body=1" for 127.0.0.1 at 2017-04-13 14:30:50 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:30:51 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:31:01 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2953ms (Views: 2951.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-3c79509d4b7e8d4e83092195da75335d4ad4e6ed0c3f16800ee76bbc241a9dbc.css?body=1" for 127.0.0.1 at 2017-04-13 14:31:04 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:31:04 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:32:12 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 2983ms (Views: 2981.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-02a528d9a21abf9ce4c3b62a4a9f7e20c71edb1162bd932a6d2a708478146689.css?body=1" for 127.0.0.1 at 2017-04-13 14:32:15 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:32:15 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:32:18 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 97ms (Views: 95.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:32:18 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:32:48 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.7ms)
+Completed 200 OK in 653ms (Views: 651.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bundle.self-10b7193d00002be39b5f1391b5592c22d6f780aa83bb3bdff7e76e52cef3b015.js?body=1" for 127.0.0.1 at 2017-04-13 14:32:49 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:32:49 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:33:01 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 2802ms (Views: 2800.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-04beee25cfcf81d377366faaed2617e435d98008f969498b5e8509a60b636d0e.css?body=1" for 127.0.0.1 at 2017-04-13 14:33:04 -0400
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:33:04 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:33:08 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:33:08 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:33:10 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 79ms (Views: 76.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:33:10 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:33:13 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 72ms (Views: 70.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:33:13 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-13 14:33:15 -0400
+Processing by StaticPagesController#index as HTML
+  Rendering static_pages/index.html.haml within layouts/application
+  Rendered static_pages/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 74ms (Views: 73.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/api/fortune.json" for 127.0.0.1 at 2017-04-13 14:33:15 -0400
+Processing by Api::FortunesController#show as JSON
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
